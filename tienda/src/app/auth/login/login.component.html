@@ -1,26 +1,38 @@
-<section id="form"><!--form-->
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4 col-sm-offset-1">
-                <div class="login-form"><!--login form-->
-                    <h2>Login to your account</h2>
-                    <form action="#">
-                        <input type="text" placeholder="Name" />
-                        <input type="email" placeholder="Email Address" />
-                        <span>
-                            <input type="checkbox" class="checkbox"> 
-                            Keep me signed in
-                        </span>
-                        <button type="submit" class="btn btn-default">Login</button>
-                    </form>
-                </div><!--/login form-->
-            </div>
-            <div class="col-sm-1">
-                <h2 class="or">O</h2>
-            </div>
-            <div class="col-sm-4">
-                
-            </div>
+<div class="row tam">
+  <div class="col-12">
+    <div class="login-form">
+      <!--login form-->
+      <h2>Login</h2>
+      <form [formGroup]="form" (ngSubmit)="login()">
+        <input type="email" placeholder="E-mail" formControlName="email" (focus)="error = false"/>
+        <input
+          type="password"
+          placeholder="Contrseña"
+          formControlName="password"
+          (focus)="error = false"
+        />
+        <span>
+          <input type="checkbox" class="checkbox" formControlName="remember" (focus)="error = false"/>
+          Recuerdame
+        </span>
+        <div class="row bg-primary margin">
+          <div class="col-2">
+            <button type="submit" class="btn btn-default" *ngIf="!preload">Entrar</button>
+            <mat-spinner color="accent" style="width:30px;" *ngIf="preload"></mat-spinner>
+
+          </div>
         </div>
+        <div class="row bg-primary margin" *ngIf="error">
+          <div class="col-2">
+           <p class="text-naranja">Formulario incompleto</p>
+
+          </div>
+        </div>
+      </form>
     </div>
-</section><!--/form-->
+    <!--/login form-->
+  </div>
+</div>
+  <div class="col-12 text-center">
+    ¿No tienes cuenta? Registrate <a class="text-naranja pointer" (click)="openDialogRegister()">aquí</a>.
+</div>

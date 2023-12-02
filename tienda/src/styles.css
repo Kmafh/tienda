@@ -6,3 +6,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .pointer{
     cursor: pointer;
 }
+
+.text-naranja{
+    color: #f0ad4e;
+}
+.bg-naranja{
+    background-color: #ffad40;
+}
+.border-naranja{
+    border:1px solid #ffad40;
+}

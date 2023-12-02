@@ -1,0 +1,14 @@
+.tam{
+    width: 70%;
+    height: 25vh;
+    margin: 5vh;
+}
+
+.center {
+    margin: 0;
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* background-color: #f0f0f0; */
+  }

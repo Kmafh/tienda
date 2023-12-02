@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background:;
+  background:100%;
   position: relative;
   font-weight:400px;
 }
@@ -252,6 +252,15 @@ a#scrollUp i{
 	color:#fdb45e;
 }
 
+.search_box input:focus {
+  width: 600px; /* Ancho aumentado */
+  background-position: 170px; /* Posición del fondo ajustada */
+  transition: width 0.3s ease-out, background-position 0.3s ease-out; /* Agrega transición */
+  background-position: 580px;
+
+}
+
+/* Estilo inicial del input */
 .search_box input {
   background: #F0F0E9;
   border: medium none;
@@ -266,6 +275,7 @@ a#scrollUp i{
   background-image: url(../images/home/searchicon.png);
   background-repeat: no-repeat;
   background-position: 130px;
+  transition: width 0.3s ease-out, background-position 0.3s ease-out; /* Agrega transición inicial */
 }
 
 
@@ -899,7 +909,7 @@ h2.title {
   transition: height 500ms ease 0s;
   width: 100%;
   display: block;
-  opacity:;
+  opacity: 0;
 }
 
 .single-products:hover .product-overlay {
