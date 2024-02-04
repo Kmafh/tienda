@@ -1,75 +1,98 @@
-header{
-    border-bottom: 1px solid #cccccc;
-    position: sticky;
+header {
+  border-bottom: 1px solid #cccccc;
 }
- /* Resetting some default styles for the list */
+/* Resetting some default styles for the list */
 
+/* Styling the horizontal menu */
+nav {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  /* Styling the horizontal menu */
-  nav {
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.logo {
+  color: #005562;
+  text-decoration: none;
+  font-size: 24px;
+}
 
-  .logo {
-    color: #005562;
-    text-decoration: none;
-    font-size: 24px;
-  }
+.search-input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin: 0 10px;
+  width: 800px;
+}
 
-  .search-input {
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    margin: 0 10px;
-    width: 800px;
-  }
+.buttons {
+  display: flex;
+  gap: 10px;
+}
 
-  .buttons {
-    display: flex;
-    gap: 10px;
-  }
-
-   /* Estilos generales para el input de texto */
+/* Estilos generales para el input de texto */
 input[type="text"] {
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  /* Estilos cuando el input de texto está enfocado (focus) */
-  input[type="text"]:focus {
-    border-color: #cccccc;
-    box-shadow: 0 0 5px rgba(166, 166, 167, 0.5);
-  }
-  
-  /* Estilos cuando el input de texto está deshabilitado */
-  input[type="text"]:disabled {
-    background-color: #f1f1f1;
-    color: #777;
-  }
-  
-  /* Estilos para el placeholder del input de texto */
-  input[type="text"]::placeholder {
-    color: #999;
-    border-color: #cccccc;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
 
-  }
-  
-  /* Estilos para el texto dentro del input de texto */
-  input[type="text"] {
-    color: #333;
-    border-color: #cccccc;
+/* Estilos cuando el input de texto está enfocado (focus) */
+input[type="text"]:focus {
+  border-color: #cccccc;
+  box-shadow: 0 0 5px rgba(166, 166, 167, 0.5);
+}
 
-  }
-  .custom-button {
-    border: 1px solid #ccc; /* Puedes ajustar el color y el grosor del borde según tus preferencias */
-  }
-  
-  .custom-menu {
-    border: 1px solid #ccc; /* Puedes ajustar el color y el grosor del borde según tus preferencias */
-    box-shadow: none; /* Asegúrate de quitar cualquier sombra que pueda estar presente */
-  }
+/* Estilos cuando el input de texto está deshabilitado */
+input[type="text"]:disabled {
+  background-color: #f1f1f1;
+  color: #777;
+}
+
+/* Estilos para el placeholder del input de texto */
+input[type="text"]::placeholder {
+  color: #999;
+  border-color: #cccccc;
+}
+
+/* Estilos para el texto dentro del input de texto */
+input[type="text"] {
+  color: #333;
+  border-color: #cccccc;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+   /* Cambia el color de fondo según tus preferencias */
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: block;
+  color: #005562; /* Cambia el color del texto según tus preferencias */
+  text-decoration: none;
+  padding: 0 15px; /* Ajusta el padding según sea necesario para el espaciado entre elementos */
+  transition: background-color 0.3s;
+}
+
+a:hover {
+  background-color: #E0EBEC;
+  border-radius: 5px;
+
+   /* Cambia el color de fondo al pasar el ratón por encima */
+}
+a:focus {
+  background-color: #B3CCD0;
+  border-radius: 5px;
+
+   /* Cambia el color de fondo al pasar el ratón por encima */
+}

@@ -8,6 +8,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { AuthModule } from './auth/auth.module';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
+import { DialogComponent } from './components/dialog/dialog.component';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     AuthModule,
     PagesModule,
-    SharedModule
+    SharedModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

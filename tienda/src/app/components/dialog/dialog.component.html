@@ -1,0 +1,23 @@
+<section>
+      <form [formGroup]="dynamicForm" (ngSubmit)="submitForm()">
+        
+<div class="row">
+    <div class="col">
+       <h2 class="text"> {{title}} </h2>
+    </div>
+</div>
+        <ng-container *ngFor="let field of formFields">
+
+          <label [for]="field.name">{{ field.label }}:</label>
+          <ng-container [ngSwitch]="field.type">
+            <input *ngSwitchCase="'text'" [type]="field.inputType" [formControlName]="field.name">
+            <select *ngSwitchCase="'select'" [formControlName]="field.name">
+              <option *ngFor="let option of field.options" [value]="option.value">{{ option.label }}</option>
+            </select>
+            <input *ngSwitchCase="'number'" [type]="field.inputType" [formControlName]="field.name" >
+          </ng-container>
+        </ng-container>
+  
+        <button mat-raised-button color="primary" type="submit">Enviar</button>
+      </form>
+</section>
