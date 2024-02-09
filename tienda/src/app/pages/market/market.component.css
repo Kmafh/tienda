@@ -1,0 +1,24 @@
+.example-container {
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }
+
+  section{
+    padding: 50px;
+    display: flex;
+
+  }
+  .title{
+    border-bottom: 1px solid red;
+
+  }

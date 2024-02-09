@@ -1,4 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Roboto Condensed', sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Estilos generales para el input de texto */
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  /* Estilos cuando el input de texto está enfocado (focus) */
+  input[type="text"]:focus {
+    border-color: #cccccc;
+    box-shadow: 0 0 5px rgba(166, 166, 167, 0.5);
+  }
+  
+  /* Estilos cuando el input de texto está deshabilitado */
+  input[type="text"]:disabled {
+    background-color: #f1f1f1;
+    color: #777;
+  }
+  
+  /* Estilos para el placeholder del input de texto */
+  input[type="text"]::placeholder {
+    color: #999;
+    border-color: #cccccc;
+  }
+  
+  /* Estilos para el texto dentro del input de texto */
+  input[type="text"] {
+    color: #333;
+    border-color: #cccccc;
+  }
+
+  
+
+
+
+
+  textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  /* Estilos cuando el input de texto está enfocado (focus) */
+  textarea:focus {
+    border-color: #cccccc;
+    box-shadow: 0 0 5px rgba(166, 166, 167, 0.5);
+  }
+  
+  /* Estilos cuando el input de texto está deshabilitado */
+  textarea:disabled {
+    background-color: #f1f1f1;
+    color: #777;
+  }
+  
+  /* Estilos para el placeholder del input de texto */
+  textarea::placeholder {
+    color: #999;
+    border-color: #cccccc;
+  }
+  
+  /* Estilos para el texto dentro del input de texto */
+  textarea {
+    color: #333;
+    border-color: #cccccc;
+  }
+select {
+  color: #333;
+    border-color: #cccccc;
+    width: 200px;
+    height: 40px;
+    outline: none;
+    border-radius: 4px;
+
+
+}
+  

@@ -1,0 +1,18 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    Filtros
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button type="button" mat-raised-button (click)="drawer.toggle()" (click)="showFiller = !showFiller" color="primary">
+        <mat-icon *ngIf="!showFiller">keyboard_arrow_right</mat-icon><mat-icon *ngIf="!showFiller">filter_list</mat-icon>
+        <mat-icon *ngIf="showFiller">keyboard_arrow_left</mat-icon><mat-icon *ngIf="showFiller">filter_list</mat-icon>
+    </button>
+    
+    <section>
+      <div class="title"><h3 class="text-primary">Mercado</h3></div>
+     
+    </section>
+    
+  </div>
+</mat-drawer-container>

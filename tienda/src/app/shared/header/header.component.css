@@ -5,7 +5,6 @@ header {
 
 /* Styling the horizontal menu */
 nav {
-  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,26 +13,30 @@ nav {
 .logo {
   color: #005562;
   text-decoration: none;
-  font-size: 24px;
 }
 
 .search-input {
-  padding: 8px;
+  padding: 50px 8px;
   border: none;
   border-radius: 4px;
-  margin: 0 10px;
-  width: 800px;
+  margin:  10px;
+  transition: width 0.8s ease; /* Agrega transiciones a las propiedades deseadas */
+}
+
+.search-input:focus {
+  width: 800px; /* Ancho máximo al estar enfocado */
 }
 
 .buttons {
   display: flex;
   gap: 10px;
 }
-
+button{
+  margin: 2px;
+}
 /* Estilos generales para el input de texto */
 input[type="text"] {
   padding: 8px;
-  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
   outline: none;
@@ -63,36 +66,3 @@ input[type="text"] {
   border-color: #cccccc;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-   /* Cambia el color de fondo según tus preferencias */
-}
-
-li {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  display: block;
-  color: #005562; /* Cambia el color del texto según tus preferencias */
-  text-decoration: none;
-  padding: 0 15px; /* Ajusta el padding según sea necesario para el espaciado entre elementos */
-  transition: background-color 0.3s;
-}
-
-a:hover {
-  background-color: #E0EBEC;
-  border-radius: 5px;
-
-   /* Cambia el color de fondo al pasar el ratón por encima */
-}
-a:focus {
-  background-color: #B3CCD0;
-  border-radius: 5px;
-
-   /* Cambia el color de fondo al pasar el ratón por encima */
-}

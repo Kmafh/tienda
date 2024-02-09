@@ -21,4 +21,9 @@ export namespace Forms {
         { type: 'text', name: 'email', label: 'Email', inputType: 'email' },
         { type: 'text', name: 'password', label: 'Contraseña', inputType: 'password' },
     ]
+    export const artworkraGroup:any = [
+        { type: 'text', name: 'nombre', label: 'Nombre', inputType: 'text' },
+        { type: 'number', name: 'precio', label: 'Precio', inputType: 'number' },
+        { type: 'textarea', name: 'description', label: 'Descripción', inputType: 'textarea' },
+    ]
   }

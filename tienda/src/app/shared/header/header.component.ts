@@ -1,3 +1,4 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import {
   MatDialog,
@@ -7,7 +8,17 @@ import { Forms } from 'src/app/interfaces/form.interface';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  animations: [
+    trigger('focusWidth', [
+      state('unfocused', style({
+        width: '200px', // Ancho inicial
+      })),
+      state('focused', style({
+        width: '800px', // Ancho máximo al estar enfocado
+      })),
+      transition('unfocused <=> focused', animate('0.8s ease')),
+    ])]
 })
 
 export class HeaderComponent {
@@ -29,5 +40,15 @@ export class HeaderComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
+  }
+
+  focusState: string = 'unfocused';
+
+  onFocus() {
+    this.focusState = 'focused';
+  }
+
+  onBlur() {
+    this.focusState = 'unfocused';
   }
 }

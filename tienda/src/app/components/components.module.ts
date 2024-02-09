@@ -5,16 +5,30 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { ArtworkComponent } from '../pages/store-art/artwork/artwork.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatStepperModule} from '@angular/material/stepper';
+import { RouterModule } from '@angular/router';
+import { MinigalleryComponent } from './minigallery/minigallery.component';
+import { ExpogalleryComponent } from './expogallery/expogallery.component';
 
 @NgModule({
-  declarations: [DialogComponent],
+  declarations: [DialogComponent, MinigalleryComponent, ExpogalleryComponent],
   imports: [
     CommonModule,
     MatIconModule,
     MatDividerModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatStepperModule,
+    RouterModule
+  ],
+  exports: [
+    MinigalleryComponent,
+    ExpogalleryComponent
   ]
 })
 export class ComponentsModule { }

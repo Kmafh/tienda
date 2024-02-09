@@ -39,6 +39,8 @@ export class DialogComponent implements OnInit {
       this.formFields = Forms.registerGroup
     } else if (this.typeForm === 'login') {
       this.formFields = Forms.loginGroup
+    } else if (this.typeForm === 'artworkra') {
+      this.formFields = Forms.artworkraGroup
     }
 
     // Crear un FormGroup dinámico

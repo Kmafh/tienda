@@ -36,7 +36,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 13, 110, 253;
+  --bs-primary-rgb: 0, 85, 98;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -60,7 +60,7 @@
   --bs-danger-bg-subtle: #f8d7da;
   --bs-light-bg-subtle: #fcfcfd;
   --bs-dark-bg-subtle: #ced4da;
-  --bs-primary-border-subtle: #9ec5fe;
+  --bs-primary-border-subtle: #B3CCD0;
   --bs-secondary-border-subtle: #c4c8cb;
   --bs-success-border-subtle: #a3cfbb;
   --bs-info-border-subtle: #9eeaf9;
@@ -154,7 +154,7 @@
   --bs-danger-text-emphasis: #ea868f;
   --bs-light-text-emphasis: #f8f9fa;
   --bs-dark-text-emphasis: #dee2e6;
-  --bs-primary-bg-subtle: #031633;
+  --bs-primary-bg-subtle: #002A34;
   --bs-secondary-bg-subtle: #161719;
   --bs-success-bg-subtle: #051b11;
   --bs-info-bg-subtle: #032830;
@@ -6809,17 +6809,13 @@ fieldset:disabled .btn {
 }
 .link-primary:focus,
 .link-primary:hover {
-  color: RGBA(10, 88, 202, var(--bs-link-opacity, 1)) !important;
+  color: RGBA(128, 170, 177, var(--bs-link-opacity, 1)) !important;
   -webkit-text-decoration-color: RGBA(
-    10,
-    88,
-    202,
+    128, 170, 177,
     var(--bs-link-underline-opacity, 1)
   ) !important;
   text-decoration-color: RGBA(
-    10,
-    88,
-    202,
+    128, 170, 177,
     var(--bs-link-underline-opacity, 1)
   ) !important;
 }

@@ -1,0 +1,12 @@
+<div class="row page-titles ms-4" *ngIf="title.title !=='Dashboard'">
+    <div class="col-md-7 align-self-center">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a routerLink="/dashboard" class="link-primary">Inicio</a>
+            </li>
+            <li class="breadcrumb-item" *ngIf="title.subTitle" ><a  routerLink="/{{title.url}}" class="link-primary">{{title.subTitle}}</a></li>
+            <li class="breadcrumb-item active">{{title.title}}</li>
+        </ol>
+    </div>
+    
+</div>

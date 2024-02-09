@@ -5,17 +5,22 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button'
 import { MatDialogModule } from '@angular/material/dialog';
+import { RouterModule } from '@angular/router';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, BreadcrumbsComponent],
   imports: [
     CommonModule,
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    RouterModule
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    BreadcrumbsComponent
+
   ]
 })
 export class SharedModule { }

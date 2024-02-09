@@ -1,0 +1,173 @@
+<div class="row">
+  <div class="col-1 text-primary text-center"><h4>Obra</h4></div>
+  
+</div>
+<mat-stepper linear #stepper>
+  <mat-step [stepControl]="artworkGroup" [editable]="isEditable">
+    <ng-template matStepLabel>Datos</ng-template>
+    <form [formGroup]="artworkGroup">
+      <label for="titulo">Título: <small class="text-danger">*</small></label>
+      <input
+        type="text"
+        id="titulo"
+        name="titulo"
+        required
+        formControlName="title"
+        *ngIf="artworkGroup.controls.title.valid || (artworkGroup.controls.title.invalid  && !formInvalid)"
+      />
+      <input
+        type="text"
+        id="titulo"
+        name="titulo"
+        required
+        formControlName="title"
+        class="border-danger"
+        *ngIf="artworkGroup.controls.title.invalid && formInvalid"
+      />
+<div class="row">
+  <div class="col-3">
+    <label for="titulo">Precio: <small class="text-danger">*</small></label>
+      <input
+        type="number"
+        id="price"
+        name="price"
+        required
+        formControlName="price"
+        *ngIf="artworkGroup.controls.price.valid || (artworkGroup.controls.price.invalid  && !formInvalid)"
+      />
+      <input
+        type="text"
+        id="price"
+        name="price"
+        required
+        formControlName="price"
+        class="border-danger"
+        *ngIf="artworkGroup.controls.price.invalid && formInvalid"
+      />
+  </div>
+  <div class="col-3">
+    <label for="descripcion">Categoría: <small class="text-danger">*</small></label>
+      <select name="category" id="category" formControlName="category">
+        <option value="">Lienzo</option>
+      </select>
+  </div>
+</div>
+      
+      
+      <label for="descripcion">Descripción: <small class="text-danger">*</small></label>
+      <textarea
+        id="descripcion"
+        name="descripcion"
+        rows="4"
+        required
+        formControlName="description"
+        *ngIf="artworkGroup.controls.description.valid || (artworkGroup.controls.description.invalid  && !formInvalid)"
+
+      ></textarea>
+      <textarea
+        id="descripcion"
+        name="descripcion"
+        rows="4"
+        required
+        formControlName="description"
+        class="border-danger"
+        *ngIf="artworkGroup.controls.description.invalid && formInvalid"
+
+      ></textarea>
+      
+      <div>
+        <button mat-raised-button matStepperNext color="primary" (click)="onCreate()">Aceptar</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [editable]="true">
+    <ng-template matStepLabel>Imagen</ng-template>
+
+    <div class="row">
+      <div class="col">
+        <div class="img-see">
+          <img src="../../../assets/img/not-img.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col text-end">
+        <label class="file-input-container">
+          <span class="file-input-label">
+            {{
+              archivo
+                ? archivo.name.length > 10
+                  ? archivo.name.slice(0, 10) + "..."
+                  : archivo.name
+                : "Seleccionar Archivo"
+            }}
+          </span>
+          <input
+            type="file"
+            id="archivo"
+            name="archivo"
+            accept=".jpg, .jpeg, .png"
+            formControlName="archivo"
+            (change)="onFileSelected($event)"
+          />
+        </label>
+      </div>
+      <div class="col">
+        <button mat-raised-button color="primary">mostrar</button>
+        <button mat-button matStepperNext>Finalizar</button>
+      </div>
+    </div>
+
+    <div></div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Resumen</ng-template>
+
+    <div class="row">
+      <div class="col-8">
+        <div class="img-see">
+          <img src="../../../assets/img/not-img.png" alt="" />
+        </div>
+      </div>
+      <div class="col-3">
+        <div >
+            <label for="titulo">Título:</label>
+            {{artworkGroup.controls.title.value}}
+        </div>
+
+        <div >
+            <label for="titulo">Descripción:</label>
+            {{artworkGroup.controls.description.value}}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col text-end">
+        <button mat-raised-button routerLink="/store" color="primary">Cerrar</button>
+        </div>
+    </div>
+    
+  </mat-step>
+</mat-stepper>
+
+<!-- <div class="row">
+    <div class="col-9">
+
+        <div class="img-see">
+            <img src="../../../assets/img/{{ archivo ? archivo.name : 'logo.png'}}" alt="">
+        </div>
+    </div>
+    <div class="col-3">
+        <form>
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required>
+        
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            
+        
+            <button type="submit">Crear Obra de Arte</button>
+          </form>
+    </div>
+
+  </div> -->
