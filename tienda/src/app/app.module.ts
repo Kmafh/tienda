@@ -22,7 +22,8 @@ import { ComponentsModule } from './components/components.module';
     AuthModule,
     PagesModule,
     SharedModule,
-    ComponentsModule
+    ComponentsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

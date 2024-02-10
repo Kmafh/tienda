@@ -1,18 +1,40 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    Filtros
+    <mat-list role="list">
+      <mat-list-item role="listitem"
+        ><h3 class="text-primary">Filtros</h3></mat-list-item
+      >
+      <mat-list-item role="listitem"
+        ><input type="text" class="search-input" placeholder="Buscar..."
+      /></mat-list-item>
+      <mat-list-item role="listitem"
+        ><button type="button" mat-raised-button color="primary">
+          Filtrar
+        </button></mat-list-item
+      >
+    </mat-list>
   </mat-drawer>
 
   <div class="example-sidenav-content">
-    <button type="button" mat-raised-button (click)="drawer.toggle()" (click)="showFiller = !showFiller" color="primary">
-        <mat-icon *ngIf="!showFiller">keyboard_arrow_right</mat-icon><mat-icon *ngIf="!showFiller">filter_list</mat-icon>
-        <mat-icon *ngIf="showFiller">keyboard_arrow_left</mat-icon><mat-icon *ngIf="showFiller">filter_list</mat-icon>
+    <button
+      type="button"
+      mat-raised-button
+      (click)="drawer.toggle()"
+      (click)="showFiller = !showFiller"
+      color="primary"
+    >
+      <mat-icon *ngIf="!showFiller">keyboard_arrow_right</mat-icon
+      ><mat-icon *ngIf="!showFiller">filter_list</mat-icon>
+      <mat-icon *ngIf="showFiller">keyboard_arrow_left</mat-icon
+      ><mat-icon *ngIf="showFiller">filter_list</mat-icon>
     </button>
-    
+
     <section>
-      <div class="title"><h3 class="text-primary">Mercado</h3></div>
-     
+      <h5 class="text-primary">Mercado</h5>
+      <mat-divider></mat-divider>
+
+      <app-gallery-market></app-gallery-market>
+
     </section>
-    
   </div>
 </mat-drawer-container>

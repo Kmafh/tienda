@@ -1,0 +1,72 @@
+
+
+.cardMe {
+    border: 1px solid #dee2e6;
+    color: #3e3f3f;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 0.5rem;
+    height: 20vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Asegura que la imagen cubra todo el espacio del contenedor */
+  }
+  .cardMe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9; /* Ajusta la opacidad según sea necesario */
+    z-index: -1;
+    transition: opacity 0.3s ease;
+  }
+  .cardMe:hover {
+    opacity: 1;
+    box-shadow: 0 4px 8px rgba(90, 90, 90, 0.2);
+  
+  }
+  .cardMe:hover::before {
+    opacity: 1;
+    box-shadow: 0 2px 4px rgba(151, 151, 151, 0.2);
+  
+  }
+  .text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #B3CCD0; /* Fondo semi-transparente */
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    transform: translateY(100%); /* Inicialmente oculto en la parte inferior */
+    transition: transform 0.3s ease;
+  }
+  
+  .cardMeBig:hover .text-overlay {
+    transform: translateY(0); /* Se desplaza hacia arriba cuando el ratón está sobre .cardMe */
+  }
+  .cardMe:hover .text-overlay {
+    transform: translateY(0); /* Se desplaza hacia arriba cuando el ratón está sobre .cardMe */
+  }
+
+  .image{
+    width: 30px; height: 30px; margin: 10px;
+  }
+
+  .nombre{
+     margin: 10px;
+  }

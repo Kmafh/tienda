@@ -19,6 +19,8 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { ComponentsModule } from '../components/components.module';
 import { MarketComponent } from './market/market.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatStepperModule,
     ComponentsModule,
     MatSidenavModule, 
+    MatListModule,
+    MatCardModule
   ]
 })
 export class PagesModule { }

@@ -12,9 +12,10 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { RouterModule } from '@angular/router';
 import { MinigalleryComponent } from './minigallery/minigallery.component';
 import { ExpogalleryComponent } from './expogallery/expogallery.component';
+import { GalleryMarketComponent } from './gallery-market/gallery-market.component';
 
 @NgModule({
-  declarations: [DialogComponent, MinigalleryComponent, ExpogalleryComponent],
+  declarations: [DialogComponent, MinigalleryComponent, ExpogalleryComponent, GalleryMarketComponent],
   imports: [
     CommonModule,
     MatIconModule,
@@ -24,11 +25,12 @@ import { ExpogalleryComponent } from './expogallery/expogallery.component';
     MatInputModule,
     MatFormFieldModule,
     MatStepperModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     MinigalleryComponent,
-    ExpogalleryComponent
+    ExpogalleryComponent,
+    GalleryMarketComponent
   ]
 })
 export class ComponentsModule { }

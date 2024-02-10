@@ -5,20 +5,19 @@
   }
   
   .example-sidenav-content {
-    display: flex;
     height: 100%;
+    padding: 10px;
   }
   
   .example-sidenav {
     padding: 20px;
+    background-color: #E0EBEC;
+    border-radius: 0.5rem;
+
   }
 
   section{
-    padding: 50px;
-    display: flex;
+    padding: 10px 80px ;
 
   }
-  .title{
-    border-bottom: 1px solid red;
-
-  }
+  
