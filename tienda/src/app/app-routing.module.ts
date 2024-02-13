@@ -5,6 +5,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { StoreArtComponent } from './pages/store-art/store-art.component';
 import { ArtworkComponent } from './pages/store-art/artwork/artwork.component';
 import { MarketComponent } from './pages/market/market.component';
+import { PromarketseeComponent } from './components/promarketsee/promarketsee.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,7 @@ const routes: Routes = [
     //canActivate: [AuthGuard],
     children: [
       { path: '', component: MarketComponent,data:{title:'Mercado'} },
+      { path: 'pro', component: PromarketseeComponent,data:{title:'Proyecto'} },
     ],
   },
   { path: '', redirectTo: "/dashboard", pathMatch: 'full'},

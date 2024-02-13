@@ -6,7 +6,6 @@ header {
 /* Styling the horizontal menu */
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -30,9 +29,18 @@ nav {
 .buttons {
   display: flex;
   gap: 10px;
+  align-items: center; /* Alinea los elementos verticalmente */
+  justify-content: flex-start; /* Alinea los elementos a la izquierda */
+  margin-left: auto; /* Empuja los elementos hacia el lado derecho */
+  
+}
+.login {
+  
+  
 }
 button{
   margin: 2px;
+  
 }
 /* Estilos generales para el input de texto */
 input[type="text"] {
@@ -66,3 +74,22 @@ input[type="text"] {
   border-color: #cccccc;
 }
 
+/* CSS para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 100%; /* Oculta el logo en pantallas más pequeñas */
+  }
+
+  .buttons {
+    flex-direction: column; /* Cambia la dirección de los botones a columnas en pantallas más pequeñas */
+    align-items: flex-end; /* Alinea los botones a la derecha en pantallas más pequeñas */
+  }
+
+  .search-input {
+    display: none /* Establece el ancho del input al 100% en pantallas más pequeñas */
+  }
+  .menu {
+    display: none 
+  }
+  /* Puedes agregar más estilos según sea necesario para hacer el menú responsivo */
+}

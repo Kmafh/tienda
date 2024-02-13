@@ -1,0 +1,37 @@
+.full-screen-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 80vh; /* Ocupa el 100% de la altura de la pantalla */
+    background-color: #e0e0e0; /* Color de fondo opcional */
+
+}
+
+.image-container {
+    max-width: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+    max-height: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+    text-align: center; /* Centra horizontalmente la imagen */
+}
+
+.image-container img {
+    max-width: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+    max-height: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+}
+
+
+.fixed-bottom {
+    position: fixed; /* Hace que el div se mantenga fijo en la pantalla */
+    bottom: 0; /* Lo posiciona en la parte inferior */
+    left: 0; /* Ajusta la posición horizontalmente */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    background-color: white; /* Color de fondo opcional */
+    border-top: 1px solid #e0e0e0;
+
+    padding: 10px; /* Espacio interno para el contenido */
+    text-align: center; /* Centra el contenido horizontalmente */
+    z-index: 999; /* Asegura que esté sobre otros elementos */
+}
+
+.info {
+    padding: 10px 400px 100px
+}

@@ -1,11 +1,9 @@
 <section>
       <form [formGroup]="dynamicForm" (ngSubmit)="submitForm()">
         
-<div class="row">
-    <div class="col">
+
        <h2 class="text"> {{title}} </h2>
-    </div>
-</div>
+
         <ng-container *ngFor="let field of formFields">
 
           <label [for]="field.name">{{ field.label }}:</label>

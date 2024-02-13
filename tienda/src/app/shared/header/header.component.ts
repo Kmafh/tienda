@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component } from '@angular/core';
+import { Component, HostBinding, HostListener  } from '@angular/core';
 import {
   MatDialog,
 } from '@angular/material/dialog';
@@ -15,15 +15,24 @@ import { Forms } from 'src/app/interfaces/form.interface';
         width: '200px', // Ancho inicial
       })),
       state('focused', style({
-        width: '800px', // Ancho máximo al estar enfocado
+        width: '600px', // Ancho máximo al estar enfocado
       })),
       transition('unfocused <=> focused', animate('0.8s ease')),
     ])]
 })
 
 export class HeaderComponent {
+  @HostBinding('class.hidden') isSmallScreen = false;
+  constructor(public dialog: MatDialog) {
+     // Detecta el tamaño de la pantalla al inicializar el componente
+     this.isSmallScreen = window.innerWidth < 768; // Ajusta este valor según lo que consideres "pantalla pequeña"
   
-  constructor(public dialog: MatDialog) {}
+  }
+  // Método para actualizar la variable isSmallScreen cuando cambia el tamaño de la pantalla
+  @HostListener('window:resize', ['$event'])
+  onResize(event:any) {
+    this.isSmallScreen = window.innerWidth < 768; // Ajusta este valor según lo que consideres "pantalla pequeña"
+  }
   get token(): string {
     return sessionStorage.getItem('token') || '';
   }

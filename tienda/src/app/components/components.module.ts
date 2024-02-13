@@ -13,9 +13,10 @@ import { RouterModule } from '@angular/router';
 import { MinigalleryComponent } from './minigallery/minigallery.component';
 import { ExpogalleryComponent } from './expogallery/expogallery.component';
 import { GalleryMarketComponent } from './gallery-market/gallery-market.component';
+import { PromarketseeComponent } from './promarketsee/promarketsee.component';
 
 @NgModule({
-  declarations: [DialogComponent, MinigalleryComponent, ExpogalleryComponent, GalleryMarketComponent],
+  declarations: [DialogComponent, MinigalleryComponent, ExpogalleryComponent, GalleryMarketComponent, PromarketseeComponent],
   imports: [
     CommonModule,
     MatIconModule,

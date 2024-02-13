@@ -79,4 +79,7 @@ select {
 
 
 }
-  
+
+.image{
+  width: 30px; height: 30px; margin: 10px;
+}
