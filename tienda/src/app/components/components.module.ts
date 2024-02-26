@@ -12,11 +12,14 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { RouterModule } from '@angular/router';
 import { MinigalleryComponent } from './minigallery/minigallery.component';
 import { ExpogalleryComponent } from './expogallery/expogallery.component';
-import { GalleryMarketComponent } from './gallery-market/gallery-market.component';
 import { PromarketseeComponent } from './promarketsee/promarketsee.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
-  declarations: [DialogComponent, MinigalleryComponent, ExpogalleryComponent, GalleryMarketComponent, PromarketseeComponent],
+  declarations: [DialogComponent, MinigalleryComponent, ExpogalleryComponent,  PromarketseeComponent],
   imports: [
     CommonModule,
     MatIconModule,
@@ -27,11 +30,14 @@ import { PromarketseeComponent } from './promarketsee/promarketsee.component';
     MatFormFieldModule,
     MatStepperModule,
     RouterModule,
+    HttpClientModule,
+    InfiniteScrollModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   exports: [
     MinigalleryComponent,
     ExpogalleryComponent,
-    GalleryMarketComponent
   ]
 })
 export class ComponentsModule { }

@@ -20,7 +20,6 @@ export class UserService {
     //this.googleInit();
     sessionStorage.getItem("us") ? this.user = JSON.parse(sessionStorage.getItem("us")!) : null;
   }
-
   
   get token(): string {
     return sessionStorage.getItem('token') || '';
@@ -48,39 +47,29 @@ export class UserService {
   getUserObservable() {
     return this.userSubject.asObservable();
   }
-  // googleInit() {
-  //   gapi.load('auth2', () => {
-  //     this.auth2 = gapi.auth2.init({
-  //       client_id:
-  //         '707524561386-47strpsnldt5agagki784ln2g776pi9v.apps.googleusercontent.com',
-  //       cookiepoliciy: 'single_host_origin',
-  //     });
-  //   });
-  // }
+  
 
   logout() {
     sessionStorage.removeItem('token');
     sessionStorage.removeItem('us');
     this._user = null;
     this.user = null;
-    // google.accounts.id.revoke('artadapt@gmail.com', () => {
-    //   this.router.navigateByUrl('/login');
-    // });
   }
 
   login(formData: any) {
     return this.http.post(`${endpoint}/login`, formData).pipe(
       tap((resp: any) => {
         sessionStorage.setItem('token', resp.token);
-        sessionStorage.setItem('us', JSON.stringify(resp.User));
-        this.user = resp.User;
+        sessionStorage.setItem('us', JSON.stringify(resp.usuario));
+        this.user(resp.User)
       })
     );
   }
 
   createUser(formData: any) {
     //pendiente de *RegisterForm
-    return this.http.post(`${endpoint}/Users`, formData);
+    console.log("Dentro")
+    return this.http.post(`${endpoint}/usuarios`, formData);
     // return this.http.post(`${endpoint}/login/sendMail`, formData);
   }
 

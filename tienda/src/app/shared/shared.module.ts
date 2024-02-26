@@ -15,7 +15,7 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     HeaderComponent,

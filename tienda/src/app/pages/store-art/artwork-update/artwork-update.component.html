@@ -1,0 +1,49 @@
+<div class="container">
+  <div >
+    <div class=" text-primary ms-2">
+      <h4>{{ artwork.title }}</h4>
+    </div>
+  </div>
+    <div class="mt-2">
+      <div class="img-see">
+        <img src="{{ url }}{{ artwork.img }}" alt="" />
+      </div>
+    </div>
+  <div >
+      <mat-tab-group>
+        <mat-tab label="Información">
+          <div class="mt-2 ">
+              <div class="d-flex align-items-center">
+                <img
+                  src="{{ urlArt }}{{ artista.img }}"
+                  alt=""
+                  style="width: 30px; height: 30px"
+                  class="rounded-circle image"
+                />
+
+                <div class="">
+                  <div style="margin-bottom: -0.5rem">{{ artista.name }}</div>
+                  <div>
+                    <small>{{ artista.email }}</small>
+                  </div>
+                </div>
+              </div>
+              <mat-divider></mat-divider>
+              <div>
+                <label>Categoría:</label>
+                {{ getCategoryLabel(artwork.category) }}
+              </div>
+
+              <div>
+                <label>Fecha creación:</label>
+                {{ artwork.createAt | date : "mediumDate" }}
+              </div>
+
+              <div><label>Descripción:</label> {{ artwork.description }}</div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Comentarios"> Comentarios </mat-tab>
+        <mat-tab label="Gestión"> Gestión </mat-tab>
+      </mat-tab-group>
+  </div>
+</div>

@@ -21,14 +21,18 @@ import { MarketComponent } from './market/market.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
-
+import { ProfileComponent } from './profile/profile.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { ArtworkUpdateComponent } from './store-art/artwork-update/artwork-update.component';
 @NgModule({
   declarations: [
     PagesComponent,
     DashboardComponent,
     StoreArtComponent,
     ArtworkComponent,
-    MarketComponent
+    MarketComponent,
+    ProfileComponent,
+    ArtworkUpdateComponent
 
   ],
   imports: [
@@ -48,7 +52,8 @@ import {MatCardModule} from '@angular/material/card';
     ComponentsModule,
     MatSidenavModule, 
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatTabsModule,
   ]
 })
 export class PagesModule { }

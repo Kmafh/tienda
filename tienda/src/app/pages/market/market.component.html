@@ -29,12 +29,15 @@
       ><mat-icon *ngIf="showFiller">filter_list</mat-icon>
     </button>
 
-    <section>
-      <h5 class="text-primary">Mercado</h5>
-      <mat-divider></mat-divider>
+    <section class="container">
+      
 
-      <app-gallery-market></app-gallery-market>
+      <app-minigallery
+        [data]="data"
+        [maxItemsToShow]="data.length"
 
+      ></app-minigallery>
+      <mat-divider class="mt-2"></mat-divider>
     </section>
   </div>
 </mat-drawer-container>

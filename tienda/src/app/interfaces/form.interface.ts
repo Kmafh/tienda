@@ -11,13 +11,13 @@ export namespace Forms {
         }
     ]
 
-    export const loginGroup:any = [
+    export const LoginGroup:any = [
         { type: 'text', name: 'email', label: 'Email', inputType: 'email' },
         { type: 'text', name: 'password', label: 'Contraseña', inputType: 'password' },
     ]
 
     export const registerGroup:any = [
-        { type: 'text', name: 'nombre', label: 'Nombre', inputType: 'text' },
+        { type: 'text', name: 'name', label: 'Nombre', inputType: 'text' },
         { type: 'text', name: 'email', label: 'Email', inputType: 'email' },
         { type: 'text', name: 'password', label: 'Contraseña', inputType: 'password' },
     ]

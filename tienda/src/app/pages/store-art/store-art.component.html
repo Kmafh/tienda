@@ -1,7 +1,17 @@
 
 <div class="container">
-    <app-minigallery></app-minigallery>
-    
+    <div class="row">
+    <div class="col-1 text-primary text-center"><h5>Almacen</h5></div>
+    <div class="col text-primary">
+      <a routerLink="/store/artwork" class="link-plus d-flex align-items-center d-flex justify-content-center" >
+        +</a
+      >
+    </div>
+    <div class="col-10 text-end ">
+      <button mat-button color="primary" (click)="maxItems()">{{maxItemsToShow === 8?'ver más':'ver menos'}}</button>
+    </div>
+    <app-minigallery [data]="data" [maxItemsToShow]="maxItemsToShow"></app-minigallery>
+</div>
     
     <app-expogallery></app-expogallery>
 

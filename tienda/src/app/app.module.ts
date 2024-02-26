@@ -10,6 +10,7 @@ import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { ComponentsModule } from './components/components.module';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { ComponentsModule } from './components/components.module';
     PagesModule,
     SharedModule,
     ComponentsModule,
-    
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

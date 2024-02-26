@@ -11,7 +11,7 @@
         <mat-icon>reorder</mat-icon>
       </button>
       <mat-menu #animals="matMenu" class="mat-elevation-z1">
-        <button mat-menu-item *ngIf="isSmallScreen"  routerLink="/store">
+        <button mat-menu-item *ngIf="isSmallScreen && token"  routerLink="/store" >
           Almacen
         </button>
         <button mat-menu-item *ngIf="isSmallScreen"  routerLink="/market">
@@ -76,11 +76,11 @@
       
     </div>
     <div class="menu">
-      <button mat-button color="primary" routerLink="/store">Almacen</button
+      <button mat-button color="primary" routerLink="/store" *ngIf="token">Almacen</button
         ><button mat-button color="primary" routerLink="/market">Mercado</button
         ><button mat-button color="primary">Artistas</button
         ><button mat-button color="primary">Salas</button>
-        <button mat-raised-button color="primary" [matMenuTriggerFor]="new" *ngIf="isSmallScreen">Nuevo <mat-icon>keyboard_arrow_down</mat-icon></button>
+        <button mat-raised-button color="primary" [matMenuTriggerFor]="new" *ngIf="token">Nuevo <mat-icon>keyboard_arrow_down</mat-icon></button>
       </div>
     
     <div class="buttons">
@@ -89,11 +89,10 @@
       
       <!-- Agrega más botones según sea necesario -->
     </div>
-    <div class="login">
       <button
         mat-icon-button
         color="primary"
-        (click)="openDialog('login')"
+        (click)="openDialog('Login')"
         *ngIf="token === ''"
       >
         <mat-icon>person</mat-icon>
@@ -107,18 +106,17 @@
       >
         <mat-icon>person</mat-icon>
       </button>
-      <mat-menu #menu="matMenu" class="mat-elevation-z1">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
+      <mat-menu #menu="matMenu" class="mat-elevation-z1 pe-2">
+        <button mat-menu-item routerLink="/profile">Prefil <mat-icon>person_outline</mat-icon></button>
+        <button mat-menu-item (click)="logout()">Cerrar sesión <mat-icon>exit_to_app</mat-icon></button>
       </mat-menu>
-    </div>
   </nav>
 </header>
-<mat-menu #new="matMenu" class="mat-elevation-z1">
-  <button mat-menu-item>
-    Vertebrates
+<mat-menu #new="matMenu" class="mat-elevation-z1 pe-2">
+  <button mat-menu-item routerLink="/store/artwork">
+    Obra
   </button>
   <button mat-menu-item >
-    Invertebrates
+    Exposición
   </button>
 </mat-menu>

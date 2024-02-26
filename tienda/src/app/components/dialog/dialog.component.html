@@ -1,11 +1,7 @@
 <section>
       <form [formGroup]="dynamicForm" (ngSubmit)="submitForm()">
-        
-
        <h2 class="text"> {{title}} </h2>
-
         <ng-container *ngFor="let field of formFields">
-
           <label [for]="field.name">{{ field.label }}:</label>
           <ng-container [ngSwitch]="field.type">
             <input *ngSwitchCase="'text'" [type]="field.inputType" [formControlName]="field.name">
@@ -17,7 +13,8 @@
             <input *ngSwitchCase="'title'" [type]="field.inputType" [formControlName]="field.name" >
           </ng-container>
         </ng-container>
-  
-        <button mat-raised-button color="primary" type="submit">Enviar</button>
+        <div *ngIf="title === 'Login'" class="mb-2">¿No tienes cuenta? Registrate <a (click)="openDialog('Registro')">aquí</a>.</div>
+        <div *ngIf="title === 'Registro'" class="mb-2">¿Tienes cuenta? Logueate <a (click)="openDialog('Login')">aquí</a>.</div>
+        <button mat-raised-button color="primary" type="submit" [disabled]="dynamicForm.invalid">Aceptar</button>
       </form>
 </section>

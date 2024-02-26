@@ -3,8 +3,10 @@ import { Component, HostBinding, HostListener  } from '@angular/core';
 import {
   MatDialog,
 } from '@angular/material/dialog';
+import { Route, Router } from '@angular/router';
 import { DialogComponent, DialogData } from 'src/app/components/dialog/dialog.component';
 import { Forms } from 'src/app/interfaces/form.interface';
+import { UserService } from 'src/app/services/user.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -23,7 +25,8 @@ import { Forms } from 'src/app/interfaces/form.interface';
 
 export class HeaderComponent {
   @HostBinding('class.hidden') isSmallScreen = false;
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog , public userService: UserService,
+    private router:Router) {
      // Detecta el tamaño de la pantalla al inicializar el componente
      this.isSmallScreen = window.innerWidth < 768; // Ajusta este valor según lo que consideres "pantalla pequeña"
   
@@ -39,7 +42,7 @@ export class HeaderComponent {
   openDialog(type:string, row?:any): void {
     const data:DialogData = {
       type: type,
-      group:Forms.loginGroup,
+      group:Forms.LoginGroup,
       data: row || null
     }
     const dialogRef = this.dialog.open(DialogComponent, {
@@ -59,5 +62,10 @@ export class HeaderComponent {
 
   onBlur() {
     this.focusState = 'unfocused';
+  }
+
+  logout() {
+    this.userService.logout();
+    this.router.navigate(['/dashboard'])
   }
 }
