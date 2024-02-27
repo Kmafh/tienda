@@ -61,7 +61,7 @@ export class UserService {
       tap((resp: any) => {
         sessionStorage.setItem('token', resp.token);
         sessionStorage.setItem('us', JSON.stringify(resp.usuario));
-        this.user(resp.User)
+        this.user(resp.usuario)
       })
     );
   }
